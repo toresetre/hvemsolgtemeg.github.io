@@ -7,134 +7,212 @@
   <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 720px;
+      max-width: 820px;
       margin: 40px auto;
       padding: 0 16px;
       line-height: 1.6;
       color: #111;
       background-color: #fff;
     }
-    h1, h2 {
-      line-height: 1.3;
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { margin-bottom: 0.2em; }
+    .lead { font-size: 1.05em; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 18px 0 28px 0;
     }
-    h1 {
-      margin-bottom: 0.2em;
+    @media (min-width: 720px) {
+      .grid { grid-template-columns: 1fr 1fr; }
     }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px;
+      background: #fafafa;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #111;
+      text-decoration: none;
+      color: #111;
+      background: #fff;
+      font-weight: 600;
+    }
+    .btn:hover { background: #f2f2f2; }
     blockquote {
       border-left: 4px solid #000;
       padding-left: 16px;
       margin-left: 0;
       color: #000;
     }
-    ul {
-      padding-left: 20px;
-    }
     .cta {
       background: #f5f5f5;
       padding: 16px;
       border-left: 4px solid #000;
-      margin: 24px 0;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+    ul { padding-left: 20px; }
+    .actors {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    @media (min-width: 720px) {
+      .actors { grid-template-columns: 1fr 1fr 1fr; }
+    }
+    .actor {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 14px;
+      background: #fff;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.85em;
+      padding: 2px 8px;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      background: #fafafa;
+      margin-top: 6px;
     }
     footer {
       margin-top: 48px;
       font-size: 0.9em;
       color: #444;
+      border-top: 1px solid #eee;
+      padding-top: 16px;
     }
   </style>
 </head>
 <body>
 
-<h1>Hvem solgte meg?</h1>
-
-<p>
-Ble du ringt av en telefonselger eller oppringt for en spørreundersøkelse du aldri har bedt om?
-Da har noen brukt telefonnummeret ditt. Det er en personopplysning.
-</p>
-
-<p>
-Når noen ringer deg, har de behandlet personopplysninger om deg.
-Det utløser rettigheter.
-</p>
-
-<h2>1. Still det riktige spørsmålet</h2>
-
-<p>Når du blir oppringt, kan du spørre:</p>
-
-<blockquote>
-  Hvor har dere telefonnummeret mitt fra?<br>
-  Hvilken dataleverandør eller kilde har dere brukt?
-</blockquote>
-
-<p>
-Dette er ikke uhøflig. Det er en lovfestet rett.
-Hvis de ikke kan eller vil svare, er det et problem for selskapet – ikke for deg.
-</p>
-
-<h2>2. Reserver deg der det faktisk monner</h2>
-
-<p>
-Du trenger ikke diskutere med telefonselgeren.
-Du stopper problemet ved kilden: dataleverandøren.
-</p>
-
-<ul>
-  <li>Profilering</li>
-  <li>Direkte markedsføring</li>
-  <li>Telefonsalg</li>
-  <li>Spørreundersøkelser per telefon</li>
-  <li>Videreformidling til tredjeparter for slike formål</li>
-</ul>
-
-<p>
-Du reserverer deg ikke mot data – du reserverer deg mot hvordan dataene brukes.
-</p>
-
-<h2>3. Ferdig tekst du kan bruke</h2>
-
-<div class="cta">
-  <p>
-  Jeg ber om at mine personopplysninger ikke brukes til profilering, direkte markedsføring,
-  telefonsalg eller spørreundersøkelser, og at opplysningene heller ikke utleveres til
-  tredjeparter for slike formål.
+  <h1>Hvem solgte meg?</h1>
+  <p class="lead">
+    Praktisk verktøy for å stoppe uønskede oppringninger ved kilden: dataleverandørene.
+    Velg det som passer situasjonen din.
   </p>
 
+  <div class="grid">
+    <div class="card">
+      <h2 style="margin-top:0;">Jeg har nettopp blitt ringt</h2>
+      <p>Finn kilden, dokumentér svaret og gjør det vanskelig å “gjemme” datagrunnlaget.</p>
+      <a class="btn" href="#ringt">Gå til: Nettopp ringt</a>
+    </div>
+
+    <div class="card">
+      <h2 style="margin-top:0;">Jeg vil være proaktiv</h2>
+      <p>Reserver deg mot profilering, markedsføring, telefonsalg og spørreundersøkelser hos dataleverandørene.</p>
+      <a class="btn" href="#proaktiv">Gå til: Reserver meg</a>
+    </div>
+  </div>
+
+  <h2 id="aktorer">Kjente aktører vi følger</h2>
   <p>
-  Jeg ber samtidig om innsyn i hvilke opplysninger dere har om meg, hvor de er hentet fra,
-  og hvem de eventuelt er delt med.
+    Dette er aktører som gjentatte ganger nevnes i dialoger om datakilder brukt ved oppringninger.
+    Siden oppdateres med dokumentasjon, kontaktpunkter og reservasjonsmaler.
   </p>
 
+  <div class="actors">
+    <div class="actor">
+      <h3 style="margin:0;">Data Factory</h3>
+      <div class="tag">Dataleverandør</div>
+      <p style="margin-bottom:0.6em;">
+        Oppført her fordi aktøren går igjen i saker knyttet til utlevering av kontaktdata og B2B-markedsføring.
+      </p>
+      <p style="margin:0;"><em>Reservasjonsmal kommer.</em></p>
+    </div>
+
+    <div class="actor">
+      <h3 style="margin:0;">Byndle</h3>
+      <div class="tag">Dataleverandør</div>
+      <p style="margin-bottom:0.6em;">
+        Oppført her fordi aktøren går igjen som kilde/ledd i kjeder ved telefonsalg og kontaktdata.
+      </p>
+      <p style="margin:0;"><em>Reservasjonsmal kommer.</em></p>
+    </div>
+
+    <div class="actor">
+      <h3 style="margin:0;">Telavox</h3>
+      <div class="tag">Tele/kommunikasjon</div>
+      <p style="margin-bottom:0.6em;">
+        Oppført her fordi aktøren er nevnt i sammenheng med telefonitjenester og formidling i salgsoppsett.
+      </p>
+      <p style="margin:0;"><em>Reservasjonsmal kommer.</em></p>
+    </div>
+  </div>
+
+  <hr style="margin:28px 0; border:0; border-top:1px solid #eee;">
+
+  <h2 id="ringt">Hvis du nettopp ble ringt</h2>
+  <p><strong>Mål:</strong> Få oppgitt hvilken datakilde de brukte.</p>
+
+  <blockquote>
+    «Hvor har dere telefonnummeret mitt fra?»<br>
+    «Hvilken dataleverandør/kilde har dere brukt?»<br>
+    «Er dette hentet fra en tredjepart? Hvilken?»
+  </blockquote>
+
+  <p><strong>Notér gjerne:</strong></p>
+  <ul>
+    <li>Hvem som ringte (firmanavn)</li>
+    <li>Dato/klokkeslett (ca.)</li>
+    <li>Hva de forsøkte å selge / undersøke</li>
+    <li>Hva de svarte om datakilde</li>
+  </ul>
+
   <p>
-  Dette gjelder både nåværende og fremtidig behandling.
+    Hvis de ikke vil svare på telefon: be om skriftlig svar på e-post. Ved manglende eller uklare svar kan du klage til Datatilsynet.
   </p>
-</div>
 
-<h2>4. Hvis du ikke får svar</h2>
-
-<p>
-Hvis selskapet ikke svarer, gir uklare opplysninger eller nekter å opplyse kilden,
-kan du klage til Datatilsynet.
-</p>
-
-<p>
-Du trenger kun å dokumentere hvem som ringte, omtrent når, og at du ba om kilde.
-</p>
-
-<h2>5. Tips</h2>
-
-<p>
-Har du blitt ringt og fått oppgitt en datakilde som ikke er nevnt her?
-</p>
-
-<p>
-Send tips til: <strong>tips@hvemsolgtemeg.no</strong><br>
-Ikke send navn, telefonnummer eller lydopptak.
-</p>
-
-<footer>
+  <h2 id="proaktiv">Vær proaktiv: Reserver deg hos dataleverandøren</h2>
   <p>
-    Dette nettstedet samler ikke inn personopplysninger og bruker ingen sporing.
+    Du reserverer deg ikke mot data – du reserverer deg mot <strong>formål</strong>.
+    Dette er typiske formål du kan reservere deg mot:
   </p>
-</footer>
+
+  <ul>
+    <li>Profilering</li>
+    <li>Direkte markedsføring</li>
+    <li>Telefonsalg</li>
+    <li>Spørreundersøkelser per telefon</li>
+    <li>Videreformidling til tredjeparter for slike formål</li>
+  </ul>
+
+  <h3>Ferdig tekst du kan bruke</h3>
+  <div class="cta">
+    <p>
+      Jeg ber om at mine personopplysninger ikke brukes til profilering, direkte markedsføring,
+      telefonsalg eller spørreundersøkelser, og at opplysningene heller ikke utleveres til
+      tredjeparter for slike formål.
+    </p>
+    <p>
+      Jeg ber samtidig om innsyn i hvilke opplysninger dere har om meg, hvor de er hentet fra,
+      og hvem de eventuelt er delt med.
+    </p>
+    <p>
+      Dette gjelder både nåværende og fremtidig behandling.
+    </p>
+  </div>
+
+  <h2>Tips</h2>
+  <p>
+    Har du blitt ringt og fått oppgitt en datakilde som ikke er nevnt her?
+    Send tips til <strong>tips@hvemsolgtemeg.no</strong>.
+  </p>
+  <p>
+    Ikke send navn, telefonnummer eller lydopptak. Kun mønstre og erfaringer.
+  </p>
+
+  <footer>
+    <p>Dette nettstedet samler ikke inn personopplysninger og bruker ingen sporing.</p>
+  </footer>
 
 </body>
 </html>
